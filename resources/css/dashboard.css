@@ -1,0 +1,108 @@
+body {
+    
+    background-color: #e9e9e9;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Tajawal', sans-serif;
+    
+}
+
+main {
+    flex: 1 0 auto;
+    
+}
+
+.card-image img:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+.gradient-45deg-light-blue-cyan.gradient-shadow {
+    box-shadow: 0 3px 10px 0 rgba(38,198,218,.5) !important;
+}
+
+.gradient-45deg-light-blue-cyan {
+    background: -webkit-linear-gradient(45deg,#0888cc,#1fe5ff) !important;
+    background: linear-gradient(45deg, #0888cc, #1fe5ff) !important;
+}
+
+.card{
+    border-radius: 10px;
+}
+
+.btn{
+    border-radius: 7px;
+}
+
+.gradient-45deg-red-pink {
+    background: #30475e;
+}
+
+.sidenav-fixed{
+    background: linear-gradient(45deg,#c234f1,#1976d2) !important;
+}
+
+.page-footer{
+    background: linear-gradient(45deg,#c234f1,#1976d2) !important;
+}
+
+.dropdown-content{
+    background:  #30475e !important;
+}
+
+.nav-wrapper{
+    background: linear-gradient(45deg,#c234f1,#1976d2) !important;
+}
+
+.highlight{
+    background: #30475e;
+    border-radius: 10px;
+}
+
+.signOff{
+    border-radius: 10px;
+    background:  #30475e;
+}
+
+.modal{
+    border-radius: 10px;
+    background:  #30475e;
+    
+}
+.modal .modal-footer{
+    border-radius: 10px;
+    background:  #30475e;
+}
+
+label {
+    display: block;
+    height: 4rem;
+    position: relative;
+  }
+  
+  .input-field {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    color: transparent;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 100%;
+    line-height: 4rem;
+    outline: none;
+    padding: 0 1rem;
+  }
+  
+  .padd-15 {
+    padding: 15px;
+}
+
+.responsive-table {
+    width: auto;
+    
+    margin:auto;
+   
+}
+
