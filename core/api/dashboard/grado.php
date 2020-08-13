@@ -19,7 +19,7 @@ if (isset($_GET['action'])) {
                 if ($result['dataset'] = $grado->readAllGrado()) {
                     $result['status'] = 1;
                 } else {
-                    $result['exception'] = 'No hay productos registrados';
+                    $result['exception'] = 'Error';
                 }
                 break;
             case 'search':
@@ -29,15 +29,15 @@ if (isset($_GET['action'])) {
                         $result['status'] = 1;
 						$rows = count($result['dataset']);
 						if ($rows > 1) {
-							$result['message'] = 'Se encontraron '.$rows.' coincidencias';
+							$result['message'] = 'there are '.$rows.' coincidences';
 						} else {
-							$result['message'] = 'Solo existe una coincidencia';
+							$result['message'] = 'There is one coincidence';
 						}
                     } else {
-                        $result['exception'] = 'No hay coincidencias';
+                        $result['exception'] = 'There is no coincidence';
                     }
                 } else {
-                    $result['exception'] = 'Ingrese un valor para buscar';
+                    $result['exception'] = 'Search something';
                 }
                 break;
             case 'create':
@@ -54,16 +54,16 @@ if (isset($_GET['action'])) {
                                     $result['exception'] = Database::getException();;
                                 }
                             } else {
-                                $result['exception'] = 'Estado incorrecto';
+                                $result['exception'] = 'Incorrect';
                             }
                         } else {
-                            $result['exception']='Seleccione un estado';
+                            $result['exception']='Select';
                         }
                     } else {
-                        $result['exception'] = 'Grado incorrecto';
+                        $result['exception'] = 'Incorrect';
                     }
                 } else {
-                    $result['exception'] = 'Cantidad incorrecto';
+                    $result['exception'] = 'Incorrect';
                 }
                 
                 break;
@@ -72,10 +72,10 @@ if (isset($_GET['action'])) {
                     if ($result['dataset'] = $grado->readOneGrado()) {
                         $result['status'] = 1;
                     } else {
-                        $result['exception'] = 'Producto inexistente';
+                        $result['exception'] = 'Incorrect';
                     }
                 } else {
-                    $result['exception'] = 'Producto incorrecto';
+                    $result['exception'] = 'Incorrect';
                 }
                 break;
             case 'update':
@@ -86,33 +86,33 @@ if (isset($_GET['action'])) {
                             if ($grado->setEstado($_POST['grado_estado'])) {
                                 if ($grado->updateGrado()) {
                                     $result['status'] = 1;
-                                    $result['message'] = 'Grado modificado correctamente';
+                                    $result['message'] = 'Updated correctly';
                                 } else {
                                     $result['exception'] = Database::getException();
                                 } 
                             } else {
-                                $result['exception'] = 'Seleccione un Estado';
+                                $result['exception'] = 'Select a status';
                             }
                         } else {
-                            $result['exception'] = 'Cantidad incorrecto';
+                            $result['exception'] = 'Incorrect';
                         }
                     } else {
-                        $result['exception'] = 'Grado inexistente';
+                        $result['exception'] = 'Incorrect';
                     }
                 } else {
-                    $result['exception'] = 'Grado incorrecto';
+                    $result['exception'] = 'Incorrect';
                 }
                 break;
             case 'delete':
                 if ($grado->setId($_POST['id_grado']) ) {
                     if ($grado->deleteGrado()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Grado eliminado correctamente';
+                        $result['message'] = 'Deleted correctly';
                     } else {
                         $result['exception'] = Database::getException();
                     }    
                 } else {
-                    $result['exception'] = 'Grado incorrecto';
+                    $result['exception'] = 'Incorrect';
                 }
                 break;
             

@@ -48,7 +48,7 @@ function openCreateModal()
     // Se abre la caja de dialogo (modal) que contiene el formulario.
     $( '#save-modal' ).modal( 'open' );
     // Se asigna el título para la caja de dialogo (modal).
-    $( '#modal-title' ).text( 'Agregar Estado' );
+    $( '#modal-title' ).text( 'Create' );
     // Se establece el campo de tipo archivo como obligatorio.
     //$( '#archivo_categoria' ).prop( 'required', true );
 }
@@ -61,7 +61,7 @@ function openUpdateModal( id )
     // Se abre la caja de dialogo (modal) que contiene el formulario.
     $( '#save-modal' ).modal( 'open' );
     // Se asigna el título para la caja de dialogo (modal).
-    $( '#modal-title' ).text( 'Modificar Estado' );
+    $( '#modal-title' ).text( 'Updated' );
     // Se establece el campo de tipo archivo como opcional.
     //$( '#archivo_categoria' ).prop( 'required', false );
 

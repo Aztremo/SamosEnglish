@@ -19,7 +19,7 @@ if (isset($_GET['action'])) {
                 if ($result['dataset'] = $tipo_doc->readAllEst()) {
                     $result['status'] = 1;
                 } else {
-                    $result['exception'] = 'No hay tipos de docentes regitrados';
+                    $result['exception'] = 'there is no registers';
                 }
                 break;
             case 'search':
@@ -29,15 +29,15 @@ if (isset($_GET['action'])) {
                         $result['status'] = 1;
                         $rows = count($result['dataset']);
                         if ($rows > 1) {
-                            $result['message'] = 'Se encontraron '.$rows.' coincidencias';
+                            $result['message'] = 'There are '.$rows.' coincidences';
                         } else {
-                            $result['message'] = 'Solo existe una coincidencia';
+                            $result['message'] = 'There is one coincidence';
                         }
                     } else {
-                        $result['exception'] = 'No hay coincidencias';
+                        $result['exception'] = 'There is no coincidence';
                     }
                 } else {
-                    $result['exception'] = 'Ingrese un valor para buscar';
+                    $result['exception'] = 'Search something';
                 }
                 break;
             case 'create':
@@ -46,12 +46,12 @@ if (isset($_GET['action'])) {
                 if($tipo_doc->setNombreestado($_POST['nombreTipo'])){
                     if ($tipo_doc->createEst()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Estado solvencia agregado correctamente';
+                        $result['message'] = 'Added correctly';
                     } else {
                         $result['exception'] = Database::getException();
                     }
                 } else {
-                    $result['exception'] = 'Nombre incorrecto';
+                    $result['exception'] = 'Incorrect';
                 }
                 
 
@@ -61,10 +61,10 @@ if (isset($_GET['action'])) {
                     if ($result['dataset'] = $tipo_doc->readOneEst()) {
                         $result['status'] = 1;
                     } else {
-                        $result['exception'] = 'Estado inexistente';
+                        $result['exception'] = 'Incorrect';
                     }
                 } else {
-                    $result['exception'] = 'Estado incorrecta';
+                    $result['exception'] = 'Incorrect';
                 }
                 break;
             case 'update':                
@@ -74,16 +74,16 @@ if (isset($_GET['action'])) {
                         if ($tipo_doc->setNombreestado($_POST['nombreTipo'])) {
                                     if ($tipo_doc->updateEst()) {
                                         $result['status'] = 1;
-                                        $result['message'] = 'Estado modificado correctamente';
+                                        $result['message'] = 'Updated correctly';
                                     } else {
                                         $result['exception'] = Database::getException();
                                     }
                                 }
                             } else {
-                                $result['exception'] = 'Nombre incorrecto';
+                                $result['exception'] = 'Incorrect';
                             }
                         } else {
-                            $result['exception'] = 'Estado incorrecto';
+                            $result['exception'] = 'Incorrect';
                         }
                 
                 break;
@@ -91,12 +91,12 @@ if (isset($_GET['action'])) {
                 if ($tipo_doc->setId($_POST['id_tipodocente']) ) {
                     if ($tipo_doc->deleteEst()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Estado eliminado correctamente';
+                        $result['message'] = 'Deleted correctly';
                     } else {
                         $result['exception'] = Database::getException();
                     }    
                 } else {
-                    $result['exception'] = 'Estado incorrecto';
+                    $result['exception'] = 'Incorrect';
                 }
                 break;
             default:
