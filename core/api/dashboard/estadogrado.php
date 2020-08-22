@@ -19,7 +19,7 @@ if (isset($_GET['action'])) {
                 if ($result['dataset'] = $estado->readAllEstado()) {
                     $result['status'] = 1;
                 } else {
-                    $result['exception'] = 'No hay estados de grado regitrados';
+                    $result['exception'] = 'There are no registred grade';
                 }
                 break;
             case 'search':
@@ -29,15 +29,15 @@ if (isset($_GET['action'])) {
                         $result['status'] = 1;
                         $rows = count($result['dataset']);
                         if ($rows > 1) {
-                            $result['message'] = 'Se encontraron '.$rows.' coincidencias';
+                            $result['message'] = 'Matches found '.$rows;
                         } else {
-                            $result['message'] = 'Solo existe una coincidencia';
+                            $result['message'] = 'There is only one match';
                         }
                     } else {
-                        $result['exception'] = 'No hay coincidencias';
+                        $result['exception'] = 'There are no coincidences';
                     }
                 } else {
-                    $result['exception'] = 'Ingrese un valor para buscar';
+                    $result['exception'] = 'Enter a value to search';
                 }
                 break;
             case 'create':
@@ -46,12 +46,12 @@ if (isset($_GET['action'])) {
                 if($estado->setNombreestado($_POST['nombreestado'])){
                     if ($estado->createEstado()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Estado perfil agregado correctamente';
+                        $result['message'] = 'Status added correctly';
                     } else {
                         $result['exception'] = Database::getException();
                     }
                 } else {
-                    $result['exception'] = 'Nombre incorrecto';
+                    $result['exception'] = 'Wrong name';
                 }
                 
 
@@ -61,10 +61,10 @@ if (isset($_GET['action'])) {
                     if ($result['dataset'] = $estado->readOneEstado()) {
                         $result['status'] = 1;
                     } else {
-                        $result['exception'] = 'Estado perfil inexistente';
+                        $result['exception'] = 'Non-existent status';
                     }
                 } else {
-                    $result['exception'] = 'Tipo incorrecta';
+                    $result['exception'] = 'Wrong type';
                 }
                 break;
             case 'update':                
@@ -74,16 +74,16 @@ if (isset($_GET['action'])) {
                         if ($estado->setNombreestado($_POST['nombreestado'])) {
                                     if ($estado->updateEstado()) {
                                         $result['status'] = 1;
-                                        $result['message'] = 'Estado perfil modificado correctamente';
+                                        $result['message'] = 'Status modified correctly';
                                     } else {
                                         $result['exception'] = Database::getException();
                                     }
                                 }
                             } else {
-                                $result['exception'] = 'Nombre incorrecto';
+                                $result['exception'] = 'Wrong name';
                             }
                         } else {
-                            $result['exception'] = 'Tipo incorrecto';
+                            $result['exception'] = 'Wrong type';
                         }
                 
                 break;
@@ -91,12 +91,12 @@ if (isset($_GET['action'])) {
                 if ($estado->setId($_POST['id_estadogrado']) ) {
                     if ($estado->deleteEstado()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Estado perfil eliminado correctamente';
+                        $result['message'] = 'Status removed successfully';
                     } else {
                         $result['exception'] = Database::getException();
                     }    
                 } else {
-                    $result['exception'] = 'tipo incorrecto';
+                    $result['exception'] = 'Wrong type';
                 }
                 break;
             default:
@@ -107,9 +107,9 @@ if (isset($_GET['action'])) {
         // Se imprime el resultado en formato JSON y se retorna al controlador.
         print(json_encode($result));
     } else {
-        exit('Acceso no disponible');
+        exit('Access not available');
     }
 } else {
-    exit('Recurso denegado');
+    exit('Appeal denied');
 }
 ?>

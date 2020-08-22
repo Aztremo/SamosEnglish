@@ -1,6 +1,6 @@
 <?php
 require_once('../../core/helpers/dashboard.php');
-Dashboard::headerTemplate('Gestion Asignatura');
+Dashboard::headerTemplate('Subject Management');
 ?>
     
     <main>
@@ -14,8 +14,8 @@ Dashboard::headerTemplate('Gestion Asignatura');
                     <img class="activator" src="../../resources/img/libros.jpg" height="320" width="310">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text">Asignaturas</span><br>
-                        <p><a href="asignaturas.php"><button class="btn grey darken-3 white-text center-align">Ver más</button></a></p>
+                        <span class="card-title activator white-text">Subjects</span><br>
+                        <p><a href="asignaturas.php"><button class="btn grey darken-3 white-text center-align">See more</button></a></p>
                     </div>
                 </div>
             </div>
@@ -26,8 +26,8 @@ Dashboard::headerTemplate('Gestion Asignatura');
                     <img class="activator" src="../../resources/img/tiposlibros.jpg" height="320" width="310">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text">Tipo Asignatura</span><br>
-                        <p><a href="Tipoasignatura.php"><button class="btn grey darken-3 white-text center-align">Ver más</button></a></p>
+                        <span class="card-title activator white-text">Subject Type</span><br>
+                        <p><a href="Tipoasignatura.php"><button class="btn grey darken-3 white-text center-align">See more</button></a></p>
                     </div>
                 </div>
             </div>
@@ -37,8 +37,8 @@ Dashboard::headerTemplate('Gestion Asignatura');
                     <img class="activator" src="../../resources/img/estalibros.jpg" height="320" width="310">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text">Estado Asignatura</span><br>
-                        <p><a href="estadoasigantura.php"><button class="btn grey darken-3 white-text center-align">Ver más</button></a></p>
+                        <span class="card-title activator white-text">Subject Status</span><br>
+                        <p><a href="estadoasigantura.php"><button class="btn grey darken-3 white-text center-align">See more</button></a></p>
                     </div>
                 </div>
             </div>

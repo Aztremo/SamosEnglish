@@ -17,15 +17,15 @@ class Database
     {
         // Credenciales para establecer la conexión con la base de datos.
         $server = 'localhost';
-<<<<<<< HEAD
+/*<<<<<<< HEAD
         $database = 'samossystem';
         $username = 'postgres';
-        $password = 'postgree';
-=======
+        $password = 'postgree';*/
+        
         $database = 'samosystem1';
         $username = 'postgres';
         $password = '123';
->>>>>>> 1e718f06845f05da9a862420253ba25bea2fd09d
+//>>>>>>> 1e718f06845f05da9a862420253ba25bea2fd09d
         // Se controlan las excepciones al momento de establecer conexión con el servidor de base de datos.
         try {
             // Se crea la conexión mediante la extensión PDO y el controlador para PostgreSQL.

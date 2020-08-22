@@ -1,6 +1,6 @@
 <?php
 require_once('../../core/helpers/dashboard.php');
-Dashboard::headerTemplate('Administrar Perfiles');
+Dashboard::headerTemplate('Manage Profiles');
 ?>
 
 <main>
@@ -12,10 +12,10 @@ Dashboard::headerTemplate('Administrar Perfiles');
             <div class="input-field col l3 s m4">
                 <i class="material-icons prefix">search</i>
                 <input id="search" type="text" name="search"/>
-                <label for="search">Buscador</label>
+                <label for="search">Seeker</label>
             </div>
             <div class="input-field col l4 s6 m4">
-                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Buscar"><i class="material-icons">search</i></button>
+                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Search"><i class="material-icons">search</i></button>
             </div>
         </form>
     </div>
@@ -29,13 +29,13 @@ Dashboard::headerTemplate('Administrar Perfiles');
         <!-- Cabeza de la tabla para mostrar los títulos de las columnas -->
         <thead>
             <tr>
-                    <th>Nombre Perfil</th>
-                    <th>Descripcion</th>
-                    <th>Porcentaje</th>
-                    <th>Fecha Inicio</th>
-                    <th>Fecha Fin</th>
-                    <th>Trimestre</th>
-                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Agregar Perfiles"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
+                    <th>Profile Name</th>
+                    <th>Description</th>
+                    <th>Percentage</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Trimester</th>
+                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Add Profile"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
             </tr>
         </thead>
         <!-- Cuerpo de la tabla para mostrar un registro por fila -->
@@ -62,56 +62,56 @@ Dashboard::headerTemplate('Administrar Perfiles');
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix"></i>
                         <input id="nombreperfil" type="text" name="nombreperfil" class="validate" required />
-                        <label for="nombreperfil">Nombre Perfil</label>
+                        <label for="nombreperfil">Profile Name</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix"></i>
                         <input id="descripcion" type="text" name="descripcion" class="validate" required />
-                        <label for="descripcion">Descripción</label>
+                        <label for="descripcion">Description</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix"></i>
                         <input id="porcentaje" type="number" name="porcentaje" class="validate" required />
-                        <label for="porcentaje">Porcentaje</label>
+                        <label for="porcentaje">Percentage</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">date</i>
                         <input id="fecha_inicio" type="date" name="fecha_inicio" class="validate" required />
-                        <label for="fecha_inicio">Fecha Inicio</label>
+                        <label for="fecha_inicio">Start Date</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">date</i>
                         <input id="fecha_fin" type="date" name="fecha_fin" class="validate" required />
-                        <label for="fecha_fin">Fecha Fin</label>
+                        <label for="fecha_fin">End Date</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">date</i>
                         <input id="trimestre" type="text" name="trimestre" class="validate" required />
-                        <label for="trimestre">Trimestre</label>
+                        <label for="trimestre">Trimester</label>
                     </div>
                     <div class="input-field col l8 s12 m6 white-text">
                         <select id="id_tipo_actividad" name="id_tipo_actividad">
                     </select>
-                        <label> Nombre Actividad </label>
+                        <label> Activity Name </label>
                     </div>
                     <div class="input-field col l8 s12 m6 white-text">
                         <select id="id_asignatura" name="id_asignatura">
                     </select>
-                        <label> Asignatura </label>
+                        <label> Subject </label>
                     </div>
                     <div class="input-field col l8 s12 m6 white-text">
                         <select id="id_estadoperfil" name="id_estadoperfil">
                         </select>
-                            <label> Estado </label>
+                            <label> Status </label>
                     </div>
                     <div class="input-field col l8 s12 m6 white-text">
                         <select id="id_docente" name="id_docente">
                         </select>
-                            <label> Nombre Docente </label>
+                            <label> Teacher Name </label>
                     </div>
                 <div class="row center-align">
-                    <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons">cancel</i></a>
-                    <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></button>
+                    <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+                    <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Save"><i class="material-icons">save</i></button>
                 </div>
             </form>
         </div>

@@ -19,7 +19,7 @@ if (isset($_GET['action'])) {
                 if ($result['dataset'] = $carga->readAllEncargado()) {
                     $result['status'] = 1;
                 } else {
-                    $result['exception'] = 'No hay clientes regitrados';
+                    $result['exception'] = 'No registered customers';
                 }
                 break;
             case 'search':
@@ -29,15 +29,15 @@ if (isset($_GET['action'])) {
                         $result['status'] = 1;
                         $rows = count($result['dataset']);
                         if ($rows > 1) {
-                            $result['message'] = 'Se encontraron '.$rows.' coincidencias';
+                            $result['message'] = 'Matches found '.$rows.;
                         } else {
-                            $result['message'] = 'Solo existe una coincidencia';
+                            $result['message'] = 'There is only one match';
                         }
                     } else {
-                        $result['exception'] = 'No hay coincidencias';
+                        $result['exception'] = 'There are no coincidences';
                     }
                 } else {
-                    $result['exception'] = 'Ingrese un valor para buscar';
+                    $result['exception'] = 'Enter a value to search';
                 }
                 break;
             case 'create':
@@ -55,39 +55,39 @@ if (isset($_GET['action'])) {
                                                     if ($carga->setHijos($_POST['hijos'])) {
                                                         if ($carga->createEncargado()) {
                                                             $result['status'] = 1;
-                                                            $result['message'] = 'Nivel agregado correctamente';
+                                                            $result['message'] = 'Mandates added correctly';
                                                         } else {
                                                             $result['exception'] = Database::getException();
                                                         }
                                                     } else {
-                                                        $result['exception'] = 'hijos incorrectos';
+                                                        $result['exception'] = 'Wrong children';
                                                     }
                                                 } else {
-                                                    $result['exception'] = 'Clave menor a 6 caracteres';
+                                                    $result['exception'] = 'Password less than 6 characters';
                                                 }
                                             } else {
-                                                $result['exception'] = 'Claves diferentes';
+                                                $result['exception'] = 'Different keys';
                                             }
                                         } else {
-                                            $result['exception'] = 'Teléfono incorrecto';
+                                            $result['exception'] = 'Wrong phone';
                                         }
                                     } else {
-                                        $result['exception'] = 'Fecha de nacimiento incorrecta';
+                                        $result['exception'] = 'Wrong date of birth';
                                     }
                                 } else {
-                                    $result['exception'] = 'DUI incorrecto';
+                                    $result['exception'] = 'Wrong DUI';
                                 }
                             } else {
-                                $result['exception'] = 'Dirección incorrecta';
+                                $result['exception'] = 'Wrong addres';
                             }
                         } else {
-                            $result['exception'] = 'Correo incorrecto';
+                            $result['exception'] = 'Wrong email';
                         }
                     } else {
-                        $result['exception'] = 'Apellidos incorrectos';
+                        $result['exception'] = 'Incorrect last names';
                     }
                 } else {
-                    $result['exception'] = 'Nombres incorrectos';
+                    $result['exception'] = 'Wrong names';
                 }
                 
 
@@ -97,10 +97,10 @@ if (isset($_GET['action'])) {
                     if ($result['dataset'] = $carga->readOneEncargado()) {
                         $result['status'] = 1;
                     } else {
-                        $result['exception'] = 'cliente inexistente';
+                        $result['exception'] = 'Non-existent mandated';
                     }
                 } else {
-                    $result['exception'] = 'Cliente incorrecto';
+                    $result['exception'] = 'Wrong mandated';
                 }
                 break;
             case 'update':                
@@ -120,70 +120,70 @@ if (isset($_GET['action'])) {
                                                             if ($carga->setHijos($_POST['hijos'])) {
                                                                 if ($carga->updateEncargado()) {
                                                                     $result['status'] = 1;
-                                                                    $result['message'] = 'Nivel agregado correctamente';
+                                                                    $result['message'] = 'Mandated added successfully';
                                                                 } else {
                                                                     $result['exception'] = Database::getException();
                                                                 }
                                                             } else {
-                                                                $result['exception'] = 'hijos incorrectos';
+                                                                $result['exception'] = 'Wrong children';
                                                             }
                                                         } else {
-                                                            $result['exception'] = 'Clave menor a 6 caracteres';
+                                                            $result['exception'] = 'Incorrect password';
                                                         }
                                                     } else {
-                                                        $result['exception'] = 'Claves diferentes';
+                                                        $result['exception'] = 'Different keys';
                                                     }
                                                 } else {
-                                                    $result['exception'] = 'Teléfono incorrecto';
+                                                    $result['exception'] = 'Wrong phone';
                                                 }
                                             } else {
-                                                $result['exception'] = 'Fecha de nacimiento incorrecta';
+                                                $result['exception'] = 'Wrong date of birth';
                                             }
                                         } else {
-                                            $result['exception'] = 'DUI incorrecto';
+                                            $result['exception'] = 'Wrong DUI';
                                         }
                                     } else {
-                                        $result['exception'] = 'Dirección incorrecta';
+                                        $result['exception'] = 'Wrong Addres';
                                     }
                                 } else {
-                                    $result['exception'] = 'Correo incorrecto';
+                                    $result['exception'] = 'Wrong Email';
                                 }
                             } else {
-                                $result['exception'] = 'Apellidos incorrectos';
+                                $result['exception'] = 'Incorrect last names';
                             }
                         } else {
-                            $result['exception'] = 'Nombres incorrectos';
+                            $result['exception'] = 'Wrong names';
                         }
                     } else {
-                        $result['exception'] = 'Producto inexistente';
+                        $result['exception'] = 'Non-existent mandated';
                     }
                 } else {
-                    $result['exception'] = 'Producto incorrecto';
+                    $result['exception'] = 'Wrong mandates';
                 }
                 break;
             case 'delete':
                 if ($carga->setId($_POST['id_encargado']) ) {
                     if ($carga->deleteEncargado()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Cliente eliminado correctamente';
+                        $result['message'] = 'Mandted successfully removed';
                     } else {
                         $result['exception'] = Database::getException();
                     }    
                 } else {
-                    $result['exception'] = 'Cliente incorrecto';
+                    $result['exception'] = 'Wrong mandates';
                 }
                 break;
             default:
-                exit('Acción no disponible');
+                exit('Action not available');
         }
         // Se indica el tipo de contenido a mostrar y su respectivo conjunto de caracteres.
         header('content-type: application/json; charset=utf-8');
         // Se imprime el resultado en formato JSON y se retorna al controlador.
         print(json_encode($result));
     } else {
-        exit('Acceso no disponible');
+        exit('Access not available');
     }
 } else {
-    exit('Recurso denegado');
+    exit('Appeal denied');
 }
 ?>

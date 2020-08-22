@@ -1,6 +1,6 @@
 <?php
 require_once('../../core/helpers/dashboard.php');
-Dashboard::headerTemplate('Datos del colegio');
+Dashboard::headerTemplate('School Data');
 ?>
 
 <main>
@@ -13,7 +13,7 @@ Dashboard::headerTemplate('Datos del colegio');
                       <tr>
                           
                           <th></th>
-                          <th>Información</th>
+                          <th>Information</th>
 						  <th></th>
 						  <th></th>
                         </tr>
@@ -22,20 +22,20 @@ Dashboard::headerTemplate('Datos del colegio');
                     <tbody>
                       <tr>
                         
-                        <td>Codigo Colegio</td>
+                        <td>College Code</td>
                         <td>10375299</td>
                             
                       </tr>
                       <tr>
                         
-                        <td>Teléfono</td>
+                        <td>Telephone</td>
                         <td>2272-6985</td>
                       </tr>
                       <tr>
                       <tr>
                         
-                        <td>Dirección</td>
-                        <td>7a Calle Poniente No. 5-A Urbanización Bonanza, Mejicanos</td>
+                        <td>Addres</td>
+                        <td>7a Poniente Street No. 5-A Urbanization Bonanza, Mejicanos</td>
                       </tr>
 					
 					  <tr>
@@ -46,26 +46,26 @@ Dashboard::headerTemplate('Datos del colegio');
 
 					  <tr>
                         
-                        <td>Código Infraestructura</td>
+                        <td>Infrastructure Code</td>
                         <td>20320</td>
                       </tr>
 
 					  <tr>
                         
-                        <td>Municipio</td>
+                        <td>Municipality</td>
                         <td>Mejicanos</td>
                       </tr>
 
 					  <tr>
                         
-                        <td>Departamento</td>
+                        <td>Department</td>
                         <td>San Salvador</td>
                       </tr>
 
 					  <tr>
                         
-                        <td>Institución</td>
-                        <td>Colegio Profesor Saul Edmundo Montero</td>
+                        <td>Institution</td>
+                        <td>Professor Saul Edmundo Montero School</td>
                       </tr>
 
                     </tbody>

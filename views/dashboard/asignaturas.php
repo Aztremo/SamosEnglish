@@ -1,6 +1,6 @@
 <?php
 require_once('../../core/helpers/dashboard.php');
-Dashboard::headerTemplate('Asignaturas');
+Dashboard::headerTemplate('Subjects');
 ?>
 
 <main>
@@ -12,10 +12,10 @@ Dashboard::headerTemplate('Asignaturas');
             <div class="input-field col l3 s m4">
                 <i class="material-icons prefix">search</i>
                 <input id="search" type="text" name="search"/>
-                <label for="search">Buscador</label>
+                <label for="search">Seeker</label>
             </div>
             <div class="input-field col l4 s6 m4">
-                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Buscar"><i class="material-icons">search</i></button>
+                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Search"><i class="material-icons">search</i></button>
             </div>
         </form>
     </div>
@@ -29,10 +29,10 @@ Dashboard::headerTemplate('Asignaturas');
         <!-- Cabeza de la tabla para mostrar los títulos de las columnas -->
         <thead>
             <tr>
-                <th>Nombre de Asignatura</th>
-                <th>Tipo de Asignatura</th>
-                <th>Estado de Asignatura</th>
-                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Agregar Asignatura"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
+                <th>Subject Name</th>
+                <th>Type of Subject</th>
+                <th>Subject Status</th>
+                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Add subject"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
             </tr>
         </thead>
         <!-- Cuerpo de la tabla para mostrar un registro por fila -->
@@ -58,21 +58,21 @@ Dashboard::headerTemplate('Asignaturas');
                 <div class="col l6 input-field center-align ">
                     <i class="material-icons prefix white-text">account_circle</i>
                     <input id="nombreasignatura" type="text" name="nombreasignatura" class="validate white-text" max="100" min="1" required/>
-                    <label for="nombreasignatura">Nombre de Asignatura</label>
+                    <label for="nombreasignatura">Subject Name</label>
                 </div>
                 <div class="input-field col l8 s12 m6 white-text">
                     <select id="id_tipoasignatura" name="id_tipoasignatura">
                     </select>
-                    <label>Tipo de Asignatura</label>
+                    <label>Type of Subject</label>
             </div>
             <div class="input-field col l8 s12 m6 white-text">
                     <select id="id_estadoasignatura" name="id_estadoasignatura">
                     </select>
-                    <label>Estado de Asignatura</label>
+                    <label>Subject Status</label>
             </div>
             <div class="row center-align">
-                <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons">cancel</i></a>
-                <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></button>
+                <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+                <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Save"><i class="material-icons">save</i></button>
             </div>
         </form>
     </div>

@@ -22,8 +22,8 @@ function fillTable( dataset )
                 <td>${row.direccion_encargado}</td>
                 <td>${row.cantidad_hijos}</td>
                 <td>
-                    <a href="#" onclick="openUpdateModal(${row.id_encargado})" class="blue-text tooltipped" data-tooltip="Actualizar"><i class="material-icons">mode_edit</i></a>
-                    <a href="#" onclick="openDeleteDialog(${row.id_encargado})" class="red-text tooltipped" data-tooltip="Eliminar"><i class="material-icons">delete</i></a>
+                    <a href="#" onclick="openUpdateModal(${row.id_encargado})" class="blue-text tooltipped" data-tooltip="Update"><i class="material-icons">mode_edit</i></a>
+                    <a href="#" onclick="openDeleteDialog(${row.id_encargado})" class="red-text tooltipped" data-tooltip="Remove"><i class="material-icons">delete</i></a>
                 </td>
             </tr>
         `;
@@ -52,7 +52,7 @@ function openCreateModal()
     // Se abre la caja de dialogo (modal) que contiene el formulario.
     $( '#save-modal' ).modal( 'open' );
     // Se asigna el título para la caja de dialogo (modal).
-    $( '#modal-title' ).text( 'Agregar Encargado' );
+    $( '#modal-title' ).text( 'Add mandated' );
     // Se establece el campo de tipo archivo como obligatorio.
     //$( '#archivo_categoria' ).prop( 'required', true );
 }
@@ -65,7 +65,7 @@ function openUpdateModal( id )
     // Se abre la caja de dialogo (modal) que contiene el formulario.
     $( '#save-modal' ).modal( 'open' );
     // Se asigna el título para la caja de dialogo (modal).
-    $( '#modal-title' ).text( 'Modificar Encargado' );
+    $( '#modal-title' ).text( 'Modify mandated' );
     // Se establece el campo de tipo archivo como opcional.
     //$( '#archivo_categoria' ).prop( 'required', false );
 

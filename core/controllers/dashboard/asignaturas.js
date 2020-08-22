@@ -22,8 +22,8 @@ function fillTable( dataset )
                 <td>${row.tipoasignatura}</td>
                 <td>${row.estado_asignatura}</td>
                 <td>
-                    <a href="#" onclick="openUpdateModal(${row.id_asignatura})" class="blue-text tooltipped" data-tooltip="Actualizar"><i class="material-icons">mode_edit</i></a>
-                    <a href="#" onclick="openDeleteDialog(${row.id_asignatura})" class="red-text tooltipped" data-tooltip="Eliminar"><i class="material-icons">delete</i></a>
+                    <a href="#" onclick="openUpdateModal(${row.id_asignatura})" class="blue-text tooltipped" data-tooltip="Update"><i class="material-icons">mode_edit</i></a>
+                    <a href="#" onclick="openDeleteDialog(${row.id_asignatura})" class="red-text tooltipped" data-tooltip="Remove"><i class="material-icons">delete</i></a>
                 </td>
             </tr>
         `;
@@ -52,7 +52,7 @@ function openCreateModal()
     // Se abre la caja de dialogo (modal) que contiene el formulario.
     $( '#save-modal' ).modal( 'open' );
     // Se asigna el título para la caja de dialogo (modal).
-    $( '#modal-title' ).text( 'Crear Asignatura' );
+    $( '#modal-title' ).text( 'Create Subject' );
     // Se establece el campo de tipo archivo como obligatorio.
     $( '#archivo_producto' ).prop( 'required', true );
     // Se llama a la función que llena el select del formulario. Se encuentra en el archivo components.js
@@ -71,7 +71,7 @@ function openUpdateModal( id )
     // Se abre la caja de dialogo (modal) que contiene el formulario.
     $( '#save-modal' ).modal( 'open' );
     // Se asigna el título para la caja de dialogo (modal).
-    $( '#modal-title' ).text( 'Modificar Asignatura' );
+    $( '#modal-title' ).text( 'Update Subject' );
     // Se establece el campo de tipo archivo como opcional.
     //$( '#archivo_producto' ).prop( 'required', false );
 

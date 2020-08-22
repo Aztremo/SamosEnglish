@@ -1,6 +1,6 @@
 <?php
 require_once('../../core/helpers/dashboard.php');
-Dashboard::headerTemplate('Encargados');
+Dashboard::headerTemplate('Mandated');
 ?>
 
 <main>
@@ -12,10 +12,10 @@ Dashboard::headerTemplate('Encargados');
             <div class="input-field col l3 s m4">
                 <i class="material-icons prefix">search</i>
                 <input id="search" type="text" name="search"/>
-                <label for="search">Buscador</label>
+                <label for="search">Seeker</label>
             </div>
             <div class="input-field col l4 s6 m4">
-                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Buscar"><i class="material-icons">search</i></button>
+                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Search"><i class="material-icons">search</i></button>
             </div>
         </form>
     </div>
@@ -29,12 +29,12 @@ Dashboard::headerTemplate('Encargados');
         <!-- Cabeza de la tabla para mostrar los títulos de las columnas -->
         <thead>
             <tr>
-                <th>NOMBRE</th>
-                <th>APELLIDO</th>
-                <th>CORREO</th>
-                <th>DIRECCION</th>
-                <th>CANT. HIJOS</th>
-                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Agregar Estado Grado"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
+                <th>NAME</th>
+                <th>LAST NAME</th>
+                <th>EMAIL</th>
+                <th>ADDRESS</th>
+                <th>CHILDREN QUANTITY</th>
+                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Add mandated"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
             </tr>
         </thead>
         <!-- Cuerpo de la tabla para mostrar un registro por fila -->
@@ -60,42 +60,42 @@ Dashboard::headerTemplate('Encargados');
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix white-text">account_box</i>
                     <input type="text" id="nombres" name="nombres" pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,50}" class="validate white-text" required/>
-                    <label for="nombres">Nombres</label>
+                    <label for="nombres">Name</label>
                 </div>
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix white-text">account_box</i>
                     <input type="text" id="apellidos" name="apellidos" pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,50}" class="validate white-text" required/>
-                    <label for="apellidos">Apellidos</label>
+                    <label for="apellidos">Last Name</label>
                 </div>
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix white-text">email</i>
                     <input type="email" id="correo" name="correo" maxlength="100" class="validate white-text" required/>
-                    <label for="correo">Correo electrónico</label>
+                    <label for="correo">Email</label>
                 </div>
                 <div class="input-field col s12 m6 white-text">
                     <i class="material-icons prefix ">place</i>
                     <input type="text" id="direccion" name="direccion" maxlength="200" class="validate white-text" required/>
-                    <label for="direccion">Dirección</label>
+                    <label for="direccion">Address</label>
                 </div>
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix white-text">security</i>
                     <input type="text" id="trabajo" name="trabajo" class="validate white-text " required/>
-                    <label for="trabajo">Lugar de trabajo</label>
+                    <label for="trabajo">Workplace</label>
                 </div>
                 <div class="input-field col s12 m6">  
                     <i class="material-icons prefix white-text">place</i>
                     <input type="text" id="municipio" name="municipio" class="validate white-text" required/>
-                    <label for="municipio">municipio</label>
+                    <label for="municipio">Municipality</label>
                 </div>
                 <div class="input-field col s12 m3 white-text">
                     <i class="material-icons prefix">cake</i>
                     <input type="date" id="fecha" name="fecha" class="validate white-text" required/>
-                    <label for="fecha">Nacimiento</label>
+                    <label for="fecha">Birth</label>
                 </div>
                 <div class="input-field col s12 m3">
                     <i class="material-icons prefix white-text">phone</i>
                     <input type="text" id="telefono" name="telefono" placeholder="0000-0000" pattern="[2,6,7]{1}[0-9]{3}[0-9]{4}" class="validate white-text " required/>
-                    <label for="telefono">Teléfono</label>
+                    <label for="telefono">Telephone</label>
                 </div>
                 <div class="input-field col s12 m3">
                     <i class="material-icons prefix white-text">how_to_reg</i>
@@ -105,15 +105,15 @@ Dashboard::headerTemplate('Encargados');
                 <div class="input-field col s12 m3">
                     <i class="material-icons prefix white-text">security</i>
                     <input type="number" id="hijos" name="hijos" class="validate white-text" max="3" min="1" required/>
-                    <label for="hijos">Cant. hijos</label>
+                    <label for="hijos">Children Q.</label>
                 </div>
                 
                 
             </div>
 
             <div class="row center-align">
-                <a href="#" class="btn waves-effect red tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons">cancel</i></a>
-                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></button>
+                <a href="#" class="btn waves-effect red tooltipped modal-close" data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Save"><i class="material-icons">save</i></button>
             </div>
         </form>
     </div>

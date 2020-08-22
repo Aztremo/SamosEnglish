@@ -19,7 +19,7 @@ if (isset($_GET['action'])) {
                 if ($result['dataset'] = $perfiles->readAllPerfiles()) {
                     $result['status'] = 1;
                 } else {
-                    $result['exception'] = 'No hay perfiles registrados';
+                    $result['exception'] = 'No registered profiles';
                 }
                 break;
             case 'search':
@@ -29,15 +29,15 @@ if (isset($_GET['action'])) {
                         $result['status'] = 1;
                         $rows = count($result['dataset']);
                         if ($rows > 1) {
-                            $result['message'] = 'Se encontraron ' . $rows . ' coincidencias';
+                            $result['message'] = 'Matches found ' . $rows;
                         } else {
-                            $result['message'] = 'Solo existe una coincidencia';
+                            $result['message'] = 'There only one match';
                         }
                     } else {
-                        $result['exception'] = 'No hay coincidencias';
+                        $result['exception'] = 'There are no coincidences';
                     }
                 } else {
-                    $result['exception'] = 'Ingrese un valor para buscar';
+                    $result['exception'] = 'Enter a value to search';
                 }
                 break;
                 case 'create':
@@ -59,51 +59,51 @@ if (isset($_GET['action'])) {
                                                                        if($perfiles->setIddocente($_POST['id_docente'])) {
                                                                            if($perfiles->createPerfiles()) {
                                                                             $result['status'] = 1;
-                                                                            $result['message'] = 'Perfil creado correctamente';
+                                                                            $result['message'] = 'Profile added correctly';
                                                                            } else {
                                                                                $result['exception'] = Database::getException();;
                                                                            }
                                                                        } else {
-                                                                           $result['exception'] = "Docente no válido";
+                                                                           $result['exception'] = "Invalid teacher";
                                                                        }
                                                                    } else {
-                                                                       $result['exception'] = "Seleccione un docente";
+                                                                       $result['exception'] = "Select a teacher";
                                                                    }
                                                                } else {
-                                                                   $result['exception'] = "Estado incorrecto";
+                                                                   $result['exception'] = "WrongsStatus";
                                                                }
                                                            } else {
-                                                               $result['exception'] = "Seleccione un estado";
+                                                               $result['exception'] = "Select a status";
                                                            }
                                                        } else {
-                                                           $result['exception'] = "Asignatura no válida";
+                                                           $result['exception'] = "Invalid subject";
                                                        }
                                                    } else {
-                                                       $result['exception'] = "Seleccione una asignatura";
+                                                       $result['exception'] = "Select a subject";
                                                    }
                                                } else {
-                                                   $result['exception'] = "Tipo de actividad no válido";
+                                                   $result['exception'] = "Invalid activity type";
                                                }
                                            } else {
-                                               $result['exception'] = "Seleccione un tipo de actividad";
+                                               $result['exception'] = "Select a activity type";
                                            }
                                        } else {
-                                           $result['exception'] = "Trimestre incorrecto";
+                                           $result['exception'] = "Wrong trimester";
                                        }
                                    } else {
-                                       $result['exception'] = "Fecha fin no válida";
+                                       $result['exception'] = "Invalid start date";
                                    }
                                } else {
-                                   $result['exception'] = "Fecha inicio no válida";
+                                   $result['exception'] = "Invalid end date";
                                }
                            } else {
-                               $result['exception'] = "Porcentaje no válido";
+                               $result['exception'] = "Invalid percentage";
                            }
                        } else {
-                           $result['exception'] = "Descripción no válida";
+                           $result['exception'] = "Invalid description";
                        }
                    } else {
-                       $result['exception'] = "Nombre de perfil no válido";
+                       $result['exception'] = "Invalid profile name";
                    }
     
                  break;
@@ -112,10 +112,10 @@ if (isset($_GET['action'])) {
                         if ($result['dataset'] = $perfiles->readOnePerfiles()) {
                             $result['status'] = 1;
                         } else {
-                            $result['exception'] = 'Este Perfil no existe';
+                            $result['exception'] = 'Non-existent profile';
                         }
                     } else {
-                        $result['exception'] = 'Perfil incorrecto';
+                        $result['exception'] = 'Wrong profile';
                     }
                     break;
                     case 'update':
@@ -134,61 +134,61 @@ if (isset($_GET['action'])) {
                                                                     if ($perfiles->setIddocente($_POST['id_docente'])) {                                              
                                                                                 if ($docente->updatePerfiles()) {
                                                                                     $result['status'] = 1;
-                                                                                    $result['message'] = 'Perfil modificado correctamente';
+                                                                                    $result['message'] = 'Profile modified correctly';
                                                                                 } else {
                                                                                     $result['exception'] = Database::getException();
                                                                                 }                                            
                                                                     } else {
-                                                                        $result['exception'] = 'Ingrese un dato valido';
+                                                                        $result['exception'] = 'Enter a valid data';
                                                                     }
                                                                 } else {
-                                                                    $result['exception'] = 'Intente un estado válido';
+                                                                    $result['exception'] = 'Try a valid state';
                                                                 }
                                                             }else {
-                                                                $result['exception'] = 'Ingrese una asignatura correcta';
+                                                                $result['exception'] = 'Enter a correct subject';
                                                             }
                                                         } else {
-                                                            $result['exception'] = 'Tipo de actividad incorrecto';
+                                                            $result['exception'] = 'Wrong activity type';
                                                         }
                                                     } else {
-                                                        $result['exception'] = 'Trimestre incorrecto';
+                                                        $result['exception'] = 'Wrong trimester';
                                                     }
                                                 } else {
-                                                    $result['exception'] = 'Fecha fin incorrecta';
+                                                    $result['exception'] = 'Wrong end date ';
                                                 }
                                             } else {
-                                                $result['exception'] = 'Fecha inicio valida';
+                                                $result['exception'] = 'Wrong start date';
                                             }
                                         } else {
-                                            $result['exception'] = 'Porcentaje no valido';
+                                            $result['exception'] = 'Invalid percentage';
                                         }
                                     } else {
-                                        $result['exception'] = 'Descripción no valida';
+                                        $result['exception'] = 'Invalid description';
                                     }
                                 } else {
-                                    $result['exception'] = 'Perfil incorrecto';
+                                    $result['exception'] = 'Wrong profile';
                                 }
                             } else {
-                                $result['exception'] = 'Perfil inexistente';
+                                $result['exception'] = 'Non-existent profile';
                             }
                         } else {
-                            $result['exception'] = 'Dato incorrecto';
+                            $result['exception'] = 'Wrong data';
                         }
                       break;
                       case 'delete':
                         if ($perfiles->setIdperfil($_POST['id_perfil']) ) {
                             if ($perfiles->deletePerfiles()) {
                                 $result['status'] = 1;
-                                $result['message'] = 'Perfil eliminado correctamente';
+                                $result['message'] = 'Profile removed correctly';
                             } else {
                                 $result['exception'] = Database::getException();
                             }    
                         } else {
-                            $result['exception'] = 'Perfil incorrecto';
+                            $result['exception'] = 'Wrong profile';
                         }
                         break;
                     
-                    exit('Acción no disponible dentro de la sesión');
+                    exit('Action not available within the session');
         }
 
         // Se indica el tipo de contenido a mostrar y su respectivo conjunto de caracteres.
@@ -196,9 +196,9 @@ if (isset($_GET['action'])) {
         // Se imprime el resultado en formato JSON y se retorna al controlador.
         print(json_encode($result));
     } else {
-        exit('Acceso no disponible');
+        exit('Access not available');
     }
 } else {
-    exit('Recurso denegado');
+    exit('Appeal denied');
 }
 ?>

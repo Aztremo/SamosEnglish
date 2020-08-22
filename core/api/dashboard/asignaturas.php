@@ -19,7 +19,7 @@ if (isset($_GET['action'])) {
                 if ($result['dataset'] = $asignaturas->readAllAsignaturas()) {
                     $result['status'] = 1;
                 } else {
-                    $result['exception'] = 'No hay asignaturas registradas';
+                    $result['exception'] = 'There are no registered subjects';
                 }
                 break;
             case 'search':
@@ -29,15 +29,15 @@ if (isset($_GET['action'])) {
                         $result['status'] = 1;
 						$rows = count($result['dataset']);
 						if ($rows > 1) {
-							$result['message'] = 'Se encontraron '.$rows.' coincidencias';
+							$result['message'] = 'Matches found '.$rows;
 						} else {
-							$result['message'] = 'Solo existe una coincidencia';
+							$result['message'] = 'There is only one match';
 						}
                     } else {
-                        $result['exception'] = 'No hay coincidencias';
+                        $result['exception'] = 'There are no coincidences';
                     }
                 } else {
-                    $result['exception'] = 'Ingrese un valor para buscar';
+                    $result['exception'] = 'Enter a value to search';
                 }
                 break;
             case 'create':
@@ -49,21 +49,21 @@ if (isset($_GET['action'])) {
                             if ($asignaturas->setIdestadoasignatura($_POST['id_estadoasignatura'])) {
                                 if ($asignaturas->createAsignatura()) {
                                     $result['status'] = 1;
-                                    $result['message'] = 'Asignatura creada correctamente';
+                                    $result['message'] = 'Course created correctly';
                                 } else {
                                     $result['exception'] = Database::getException();;
                                 }
                             } else {
-                                $result['exception'] = 'Estado incorrecto';
+                                $result['exception'] = 'Wrong state';
                             }
                         } else {
-                            $result['exception']='Seleccione un estado';
+                            $result['exception']='Select a state';
                         }
                     } else {
-                        $result['exception'] = 'Tipo incorrecto';
+                        $result['exception'] = 'Wrong type';
                     }
                 } else {
-                    $result['exception'] = 'Asignatura incorrecta';
+                    $result['exception'] = 'Wrong subject';
                 }
                 
                 break;
@@ -72,10 +72,10 @@ if (isset($_GET['action'])) {
                     if ($result['dataset'] = $asignaturas->readOneAsignaturas()) {
                         $result['status'] = 1;
                     } else {
-                        $result['exception'] = 'Asignatura inexistente';
+                        $result['exception'] = 'Non-existent subject';
                     }
                 } else {
-                    $result['exception'] = 'Asignatura incorrecta';
+                    $result['exception'] = 'Wrong subject';
                 }
                 break;
             case 'update':
@@ -87,49 +87,49 @@ if (isset($_GET['action'])) {
                                 if ($asignaturas->setIdTipoasignatura($_POST['id_tipoasignatura'])) {
                                 if ($asignaturas->updateAsignatura()) {
                                     $result['status'] = 1;
-                                    $result['message'] = 'Asignatura modificada correctamente';
+                                    $result['message'] = 'Subject modified correctly';
                                 } else {
                                     $result['exception'] = Database::getException();
                                 } 
                             } else {
-                                $result['exception'] = 'Seleccione un Tipo';
+                                $result['exception'] = 'Select a type';
                             }
                         } else {
-                            $result['exception'] = 'Seleccione un Estado';
+                            $result['exception'] = 'Select a state';
                         }
                     } else {
-                        $result['exception'] = 'Asignatura inexistente';
+                        $result['exception'] = 'Non-existent subject';
                     }
                 } else {
-                    $result['exception'] = 'Asignatura incorrecta';
+                    $result['exception'] = 'Wrong subject';
                 }
             } else {
-                $result['exception'] = 'Id de Asignatura incorrecto';
+                $result['exception'] = 'Wrong subject id';
             }
                 break;
             case 'delete':
                 if ($asignaturas->setIdasignatura($_POST['id_asignatura']) ) {
                     if ($asignaturas->deleteAsignaturas()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Asignatura eliminada correctamente';
+                        $result['message'] = 'Subject successfully removed';
                     } else {
                         $result['exception'] = Database::getException();
                     }    
                 } else {
-                    $result['exception'] = 'Asignatura incorrecta';
+                    $result['exception'] = 'Wrong Subject';
                 }
                 break;
             
-            exit('Acción no disponible dentro de la sesión');
+            exit('Action not available within the session');
         }
         // Se indica el tipo de contenido a mostrar y su respectivo conjunto de caracteres.
         header('content-type: application/json; charset=utf-8');
         // Se imprime el resultado en formato JSON y se retorna al controlador.
         print(json_encode($result));
     } else {
-        exit('Acceso no disponible');
+        exit('Access not available');
     }
 } else {
-	exit('Recurso denegado');
+	exit('Appeal denied');
 }
 ?>
