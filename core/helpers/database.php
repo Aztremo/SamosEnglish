@@ -22,9 +22,9 @@ class Database
         $username = 'postgres';
         $password = 'postgree';*/
         
-        $database = 'samosystem1';
+        $database = 'samosystem';
         $username = 'postgres';
-        $password = '123';
+        $password = 'josh';
 //>>>>>>> 1e718f06845f05da9a862420253ba25bea2fd09d
         // Se controlan las excepciones al momento de establecer conexión con el servidor de base de datos.
         try {

@@ -19,7 +19,7 @@ if (isset($_GET['action'])) {
                 if ($result['dataset'] = $estado->readAllEstado()) {
                     $result['status'] = 1;
                 } else {
-                    $result['exception'] = 'No hay estados de perfiles regitrados';
+                    $result['exception'] = 'No status of registered profiles';
                 }
                 break;
             case 'search':
@@ -29,15 +29,15 @@ if (isset($_GET['action'])) {
                         $result['status'] = 1;
                         $rows = count($result['dataset']);
                         if ($rows > 1) {
-                            $result['message'] = 'Se encontraron '.$rows.' coincidencias';
+                            $result['message'] = 'Were found '.$rows.' matches found';
                         } else {
-                            $result['message'] = 'Solo existe una coincidencia';
+                            $result['message'] = 'There is only one match';
                         }
                     } else {
-                        $result['exception'] = 'No hay coincidencias';
+                        $result['exception'] = 'There are no coincidences';
                     }
                 } else {
-                    $result['exception'] = 'Ingrese un valor para buscar';
+                    $result['exception'] = 'Enter a search parameter';
                 }
                 break;
             case 'create':
@@ -46,7 +46,7 @@ if (isset($_GET['action'])) {
                 if($estado->setNombreestado($_POST['nombreestado'])){
                     if ($estado->createEstado()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Estado perfil agregado correctamente';
+                        $result['message'] = 'Profile status added successfully';
                     } else {
                         $result['exception'] = Database::getException();
                     }
@@ -74,7 +74,7 @@ if (isset($_GET['action'])) {
                         if ($estado->setNombreestado($_POST['nombreestado'])) {
                                     if ($estado->updateEstado()) {
                                         $result['status'] = 1;
-                                        $result['message'] = 'Estado perfil modificado correctamente';
+                                        $result['message'] = 'Profile status modified successfully';
                                     } else {
                                         $result['exception'] = Database::getException();
                                     }
@@ -91,7 +91,7 @@ if (isset($_GET['action'])) {
                 if ($estado->setId($_POST['id_estadoperfil']) ) {
                     if ($estado->deleteEstado()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Estado perfil eliminado correctamente';
+                        $result['message'] = 'Profile status deleted successfully';
                     } else {
                         $result['exception'] = Database::getException();
                     }    

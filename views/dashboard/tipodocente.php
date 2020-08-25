@@ -1,6 +1,6 @@
 <?php
 require_once('../../core/helpers/dashboard.php');
-Dashboard::headerTemplate('Tipo docente');
+Dashboard::headerTemplate('Teacher type');
 ?>
 
 <main>
@@ -12,10 +12,10 @@ Dashboard::headerTemplate('Tipo docente');
             <div class="input-field col l3 s m4">
                 <i class="material-icons prefix">search</i>
                 <input id="search" type="text" name="search"/>
-                <label for="search">Buscador</label>
+                <label for="search">Search</label>
             </div>
             <div class="input-field col l4 s6 m4">
-                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Buscar"><i class="material-icons">search</i></button>
+                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Search"><i class="material-icons">search</i></button>
             </div>
         </form>
     </div>
@@ -29,8 +29,8 @@ Dashboard::headerTemplate('Tipo docente');
         <!-- Cabeza de la tabla para mostrar los títulos de las columnas -->
         <thead>
             <tr>
-                <th>NOMBRE TIPO</th>
-                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Agregar Tipo docente"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
+                <th>TYPE NAME</th>
+                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Add Teacher Type"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
             </tr>
         </thead>
         <!-- Cuerpo de la tabla para mostrar un registro por fila -->
@@ -46,7 +46,7 @@ Dashboard::headerTemplate('Tipo docente');
     </div>
 
     <div id="save-modal" class="modal">
-    <div class="modal-content">
+    <div class="modal-content white-text">
         <h4 id="modal-title" class="center-align"></h4>
         <!-- Formulario para crear o actualizar un registro -->
         <form method="post" id="save-form" enctype="multipart/form-data">
@@ -56,12 +56,12 @@ Dashboard::headerTemplate('Tipo docente');
                 <div class="input-field center-align">
                     <i class="material-icons prefix">account_circle</i>
                     <input id="nombreTipo" type="text" name="nombreTipo" pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,50}" class="validate white-text" required/>
-                    <label for="nombreTipo">Nombre Tipo</label>
+                    <label for="nombreTipo">Type Name</label>
                 </div>
             </div>
             <div class="row center-align">
-                <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons">cancel</i></a>
-                <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></button>
+                <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+                <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Save"><i class="material-icons">save</i></button>
             </div>
         </form>
     </div>

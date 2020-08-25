@@ -19,7 +19,7 @@ if (isset($_GET['action'])) {
                 if ($result['dataset'] = $estado->readAllEstado()) {
                     $result['status'] = 1;
                 } else {
-                    $result['exception'] = 'No hay estados de asignatura regitrados';
+                    $result['exception'] = 'There is no registered subject status';
                 }
                 break;
             case 'search':
@@ -29,15 +29,15 @@ if (isset($_GET['action'])) {
                         $result['status'] = 1;
                         $rows = count($result['dataset']);
                         if ($rows > 1) {
-                            $result['message'] = 'Se encontraron '.$rows.' coincidencias';
+                            $result['message'] = 'We are'.$rows.'Matches found';
                         } else {
-                            $result['message'] = 'Solo existe una coincidencia';
+                            $result['message'] = 'There is only one match';
                         }
                     } else {
-                        $result['exception'] = 'No hay coincidencias';
+                        $result['exception'] = 'No Matches';
                     }
                 } else {
-                    $result['exception'] = 'Ingrese un valor para buscar';
+                    $result['exception'] = 'Enter a parameter to search';
                 }
                 break;
             case 'create':
@@ -46,7 +46,7 @@ if (isset($_GET['action'])) {
                 if($estado->setNombreestado($_POST['nombreestado'])){
                     if ($estado->createEstado()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Estado docente agregado correctamente';
+                        $result['message'] = 'Subject status added correctly';
                     } else {
                         $result['exception'] = Database::getException();
                     }
@@ -64,7 +64,7 @@ if (isset($_GET['action'])) {
                         $result['exception'] = 'Tipo docente inexistente';
                     }
                 } else {
-                    $result['exception'] = 'Tipo incorrecta';
+                    $result['exception'] = 'Wrong name';
                 }
                 break;
             case 'update':                
@@ -74,16 +74,16 @@ if (isset($_GET['action'])) {
                         if ($estado->setNombreestado($_POST['nombreestado'])) {
                                     if ($estado->updateEstado()) {
                                         $result['status'] = 1;
-                                        $result['message'] = 'Estado asignatura modificado correctamente';
+                                        $result['message'] = 'Subject status modified correctly';
                                     } else {
                                         $result['exception'] = Database::getException();
                                     }
                                 }
                             } else {
-                                $result['exception'] = 'Nombre incorrecto';
+                                $result['exception'] = 'Wrong name';
                             }
                         } else {
-                            $result['exception'] = 'Tipo incorrecto';
+                            $result['exception'] = 'Wrong Type';
                         }
                 
                 break;
@@ -91,7 +91,7 @@ if (isset($_GET['action'])) {
                 if ($estado->setId($_POST['id_estadoasignatura']) ) {
                     if ($estado->deleteEstado()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Estado asignatura eliminado correctamente';
+                        $result['message'] = 'Subject status deleted successfully';
                     } else {
                         $result['exception'] = Database::getException();
                     }    

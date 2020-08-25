@@ -19,7 +19,7 @@ if (isset($_GET['action'])) {
                 if ($result['dataset'] = $tipo->readAllTipo()) {
                     $result['status'] = 1;
                 } else {
-                    $result['exception'] = 'No hay tipos de asignatura regitrados';
+                    $result['exception'] = 'There are no registered subject types';
                 }
                 break;
             case 'search':
@@ -29,15 +29,15 @@ if (isset($_GET['action'])) {
                         $result['status'] = 1;
                         $rows = count($result['dataset']);
                         if ($rows > 1) {
-                            $result['message'] = 'Se encontraron '.$rows.' coincidencias';
+                            $result['message'] = 'Were found '.$rows.' matches found';
                         } else {
-                            $result['message'] = 'Solo existe una coincidencia';
+                            $result['message'] = 'There is only one match';
                         }
                     } else {
-                        $result['exception'] = 'No hay coincidencias';
+                        $result['exception'] = 'NO matches';
                     }
                 } else {
-                    $result['exception'] = 'Ingrese un valor para buscar';
+                    $result['exception'] = 'Enter a search parameter';
                 }
                 break;
             case 'create':
@@ -46,7 +46,7 @@ if (isset($_GET['action'])) {
                 if($tipo->setNombretipo($_POST['nombretipo'])){
                     if ($tipo->createTipo()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Tipo asignatura agregado correctamente';
+                        $result['message'] = 'Subject type added correctly';
                     } else {
                         $result['exception'] = Database::getException();
                     }
@@ -74,7 +74,7 @@ if (isset($_GET['action'])) {
                         if ($tipo->setNombretipo($_POST['nombretipo'])) {
                                     if ($tipo->updateTipo()) {
                                         $result['status'] = 1;
-                                        $result['message'] = 'Tipo asignatura modificado correctamente';
+                                        $result['message'] = 'Subject type updated correctly';
                                     } else {
                                         $result['exception'] = Database::getException();
                                     }
@@ -91,7 +91,7 @@ if (isset($_GET['action'])) {
                 if ($tipo->setId($_POST['id_tipoasignatura']) ) {
                     if ($tipo->deleteTipo()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Tipo asignatura eliminado correctamente';
+                        $result['message'] = 'Subject type successfully removed';
                     } else {
                         $result['exception'] = Database::getException();
                     }    

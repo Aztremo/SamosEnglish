@@ -19,7 +19,7 @@ if (isset($_GET['action'])) {
                 if ($result['dataset'] = $tipo_doc->readAllTipo()) {
                     $result['status'] = 1;
                 } else {
-                    $result['exception'] = 'No hay tipos de docentes regitrados';
+                    $result['exception'] = 'There are no types of teachers registered';
                 }
                 break;
             case 'search':
@@ -29,15 +29,15 @@ if (isset($_GET['action'])) {
                         $result['status'] = 1;
                         $rows = count($result['dataset']);
                         if ($rows > 1) {
-                            $result['message'] = 'Se encontraron '.$rows.' coincidencias';
+                            $result['message'] = 'We are'.$rows.'Matches found';
                         } else {
-                            $result['message'] = 'Solo existe una coincidencia';
+                            $result['message'] = 'There is only one match';
                         }
                     } else {
-                        $result['exception'] = 'No hay coincidencias';
+                        $result['exception'] = 'No matches';
                     }
                 } else {
-                    $result['exception'] = 'Ingrese un valor para buscar';
+                    $result['exception'] = 'Enter a parameter to search';
                 }
                 break;
             case 'create':
@@ -46,12 +46,12 @@ if (isset($_GET['action'])) {
                 if($tipo_doc->setNombretipo($_POST['nombreTipo'])){
                     if ($tipo_doc->createTipo()) {
                         $result['status'] = 1;
-                        $result['message'] = 'Tipo de docente agregado correctamente';
+                        $result['message'] = 'Teacher type added correctly';
                     } else {
                         $result['exception'] = Database::getException();
                     }
                 } else {
-                    $result['exception'] = 'Nombre incorrecto';
+                    $result['exception'] = 'Wrong name';
                 }
                 
 
@@ -61,7 +61,7 @@ if (isset($_GET['action'])) {
                     if ($result['dataset'] = $tipo_doc->readOneTipo()) {
                         $result['status'] = 1;
                     } else {
-                        $result['exception'] = 'Tipo docente inexistente';
+                        $result['exception'] = 'Non-existent teacher type';
                     }
                 } else {
                     $result['exception'] = 'Tipo incorrecta';
@@ -74,7 +74,7 @@ if (isset($_GET['action'])) {
                         if ($tipo_doc->setNombretipo($_POST['nombreTipo'])) {
                                     if ($tipo_doc->updateTipo()) {
                                         $result['status'] = 1;
-                                        $result['message'] = 'Tipo docente modificado correctamente';
+                                        $result['message'] = 'Teaching type correctly modified';
                                     } else {
                                         $result['exception'] = Database::getException();
                                     }
@@ -91,7 +91,7 @@ if (isset($_GET['action'])) {
                 if ($tipo_doc->setId($_POST['id_tipodocente']) ) {
                     if ($tipo_doc->deleteTipo()) {
                         $result['status'] = 1;
-                        $result['message'] = 'tipo de docente eliminado correctamente';
+                        $result['message'] = 'Teacher type successfully removed';
                     } else {
                         $result['exception'] = Database::getException();
                     }    

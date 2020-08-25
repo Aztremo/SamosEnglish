@@ -18,8 +18,8 @@ function fillTable( dataset )
             <tr>
                 <td>${row.tipo}</td>
                 <td>
-                    <a href="#" onclick="openUpdateModal(${row.id_tipodocente})" class="blue-text tooltipped" data-tooltip="Actualizar"><i class="material-icons">mode_edit</i></a>
-                    <a href="#" onclick="openDeleteDialog(${row.id_tipodocente})" class="red-text tooltipped" data-tooltip="Eliminar"><i class="material-icons">delete</i></a>
+                    <a href="#" onclick="openUpdateModal(${row.id_tipodocente})" class="blue-text tooltipped" data-tooltip="Update"><i class="material-icons">mode_edit</i></a>
+                    <a href="#" onclick="openDeleteDialog(${row.id_tipodocente})" class="red-text tooltipped" data-tooltip="Delete"><i class="material-icons">delete</i></a>
                 </td>
             </tr>
         `;
@@ -48,7 +48,7 @@ function openCreateModal()
     // Se abre la caja de dialogo (modal) que contiene el formulario.
     $( '#save-modal' ).modal( 'open' );
     // Se asigna el título para la caja de dialogo (modal).
-    $( '#modal-title' ).text( 'Agregar Tipo docente' );
+    $( '#modal-title' ).text( 'Add Teacher Type' );
     // Se establece el campo de tipo archivo como obligatorio.
     //$( '#archivo_categoria' ).prop( 'required', true );
 }
@@ -61,7 +61,7 @@ function openUpdateModal( id )
     // Se abre la caja de dialogo (modal) que contiene el formulario.
     $( '#save-modal' ).modal( 'open' );
     // Se asigna el título para la caja de dialogo (modal).
-    $( '#modal-title' ).text( 'Modificar Tipo Docente' );
+    $( '#modal-title' ).text( 'Update Teacher Type' );
     // Se establece el campo de tipo archivo como opcional.
     //$( '#archivo_categoria' ).prop( 'required', false );
 
