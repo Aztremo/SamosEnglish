@@ -1,6 +1,6 @@
 <?php
 require_once('../../core/helpers/dashboard.php');
-Dashboard::headerTemplate('Solvencia');
+Dashboard::headerTemplate('Notes');
 ?>
 
 <main>
@@ -12,10 +12,10 @@ Dashboard::headerTemplate('Solvencia');
             <div class="input-field col l3 s m4">
                 <i class="material-icons prefix">search</i>
                 <input id="search" type="text" name="search"/>
-                <label for="search">Buscador</label>
+                <label for="search">Search</label>
             </div>
             <div class="input-field col l4 s6 m4">
-                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Buscar"><i class="material-icons">search</i></button>
+                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Search"><i class="material-icons">search</i></button>
             </div>
         </form>
     </div>
@@ -30,10 +30,10 @@ Dashboard::headerTemplate('Solvencia');
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Promedio</th>
-                <th>Perfil</th>
-                <th>Alumno</th>
-                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Agregar Nota"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
+                <th>Average</th>
+                <th>Profile</th>
+                <th>Student</th>
+                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Add Note"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
             </tr>
         </thead>
         <!-- Cuerpo de la tabla para mostrar un registro por fila -->
@@ -59,23 +59,23 @@ Dashboard::headerTemplate('Solvencia');
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">person</i>
                         <input id="promedio_final" type="text" name="promedio_final" class="validate" required />
-                        <label for="promedio_final">Promedio</label>
+                        <label for="promedio_final">Average</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">person</i>
                         <input id="id_perfil" type="text" name="id_perfil" class="validate" required />
-                        <label for="id_perfil">Perfil</label>
+                        <label for="id_perfil">Profile</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">email</i>
                         <input id="id_alumno" type="text" name="id_alumno" class="validate" required />
-                        <label for="id_alumno">Alumno</label>
+                        <label for="id_alumno">Student</label>
                     </div>
                     
                 </div>
                 <div class="row center-align">
-                    <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons">cancel</i></a>
-                    <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></button>
+                    <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+                    <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Save"><i class="material-icons">save</i></button>
                 </div>
             </form>
         </div>

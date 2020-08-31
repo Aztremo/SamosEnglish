@@ -1,6 +1,6 @@
 <?php
 require_once('../../core/helpers/dashboard.php');
-Dashboard::headerTemplate('Administrar Docentes');
+Dashboard::headerTemplate('Teachers Management');
 ?>
 
 <main>
@@ -12,10 +12,10 @@ Dashboard::headerTemplate('Administrar Docentes');
             <div class="input-field col l3 s m4">
                 <i class="material-icons prefix">search</i>
                 <input id="search" type="text" name="search"/>
-                <label for="search">Buscador</label>
+                <label for="search">Search</label>
             </div>
             <div class="input-field col l4 s6 m4">
-                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Buscar"><i class="material-icons">search</i></button>
+                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Search"><i class="material-icons">search</i></button>
             </div>
         </form>
     </div>
@@ -30,15 +30,15 @@ Dashboard::headerTemplate('Administrar Docentes');
         <thead>
             <tr>
                     <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Correo</th>
-                    <th>Teléfono</th>
-                    <th>Dirección</th>
+                    <th>Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Telephone</th>
+                    <th>Address</th>
                     <th>Dui</th>
-                    <th>Escalafon</th>
-                    <th>Accion</th>
-                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Agregar Docentes"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
+                    <th>Escale</th>
+                    <th>Action</th>
+                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Add Teacher"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
             </tr>
         </thead>
         <!-- Cuerpo de la tabla para mostrar un registro por fila -->
@@ -65,27 +65,27 @@ Dashboard::headerTemplate('Administrar Docentes');
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">person</i>
                         <input id="nombredocente" type="text" name="nombredocente" class="validate" required />
-                        <label for="nombredocente">Nombres</label>
+                        <label for="nombredocente">Name</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">person</i>
                         <input id="apellidodocente" type="text" name="apellidodocente" class="validate" required />
-                        <label for="apellidodocente">Apellidos</label>
+                        <label for="apellidodocente">Last Name</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">email</i>
                         <input id="correodocente" type="email" name="correodocente" class="validate" required />
-                        <label for="correodocente">Correo</label>
+                        <label for="correodocente">Email</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">phone</i>
                         <input id="telefonodocente" type="text" name="telefonodocente" class="validate" required />
-                        <label for="telefonodocente">Telefono</label>
+                        <label for="telefonodocente">Telephone</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">person</i>
                         <input id="direcciondocente" type="text" name="direcciondocente" class="validate" required />
-                        <label for="direcciondocente">Direccion</label>
+                        <label for="direcciondocente">Address</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">person</i>
@@ -95,38 +95,38 @@ Dashboard::headerTemplate('Administrar Docentes');
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">cake</i>
                         <input id="fecha_nacimientodocente" type="date" name="fecha_nacimientodocente" class="validate" required />
-                        <label for="fecha_nacimientodocente">Nacimiento</label>
+                        <label for="fecha_nacimientodocente">Birthday</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">person</i>
                         <input id="titulos" type="text" name="titulos" class="validate" required />
-                        <label for="titulos">Titulos</label>
+                        <label for="titulos">Titles</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">person</i>
                         <input id="contra_prof" type="password" name="contra_prof" class="validate" required />
-                        <label for="contra_prof">Contraseña</label>
+                        <label for="contra_prof">Password</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">person</i>
                         <input id="num_escalafon" type="text" name="num_escalafon" class="validate" required />
-                        <label for="num_escalafon">Escalafon</label>
+                        <label for="num_escalafon">Escale</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">person</i>
                         <input id="id_tipodocente" type="text" name="id_tipodocente" class="validate" required />
-                        <label for="id_tipodocente">Tipo</label>
+                        <label for="id_tipodocente">Tipe</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">person</i>
                         <input id="id_niveldoc" type="text" name= "id_niveldoc" class="validate" required/>
-                        <label for ="id_niveldoc">Nivel</label>
+                        <label for ="id_niveldoc">Level</label>
                     </div>
                     
                 </div>
                 <div class="row center-align">
-                    <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons">cancel</i></a>
-                    <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></button>
+                    <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+                    <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Save"><i class="material-icons">save</i></button>
                 </div>
             </form>
         </div>

@@ -1,6 +1,6 @@
 <?php
 require_once('../../core/helpers/dashboard.php');
-Dashboard::headerTemplate('Solvencia');
+Dashboard::headerTemplate('Solvency');
 ?>
 
 <main>
@@ -12,10 +12,10 @@ Dashboard::headerTemplate('Solvencia');
             <div class="input-field col l3 s m4">
                 <i class="material-icons prefix">search</i>
                 <input id="search" type="text" name="search"/>
-                <label for="search">Buscador</label>
+                <label for="search">Search</label>
             </div>
             <div class="input-field col l4 s6 m4">
-                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Buscar"><i class="material-icons">search</i></button>
+                <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Search"><i class="material-icons">search</i></button>
             </div>
         </form>
     </div>
@@ -30,9 +30,9 @@ Dashboard::headerTemplate('Solvencia');
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Estado</th>
-                <th>Anio</th>
-                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Agregar Solvencia"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
+                <th>Estatus</th>
+                <th>Year</th>
+                <th><a href="#" onclick="openCreateModal()" class=" waves-effect tooltipped" data-tooltip="Add Solvency"><i class="small material-icons green-text text- accent-4">add_circle</i></a></th>
             </tr>
         </thead>
         <!-- Cuerpo de la tabla para mostrar un registro por fila -->
@@ -58,17 +58,17 @@ Dashboard::headerTemplate('Solvencia');
                 <div class="input-field center-align">
                     <i class="material-icons prefix">account_circle</i>
                     <input id="id_estadosolvencia" type="text" name="id_estadosolvencia" class="validate white-text" required/>
-                    <label for="id_estadosolvencia">Estado</label>
+                    <label for="id_estadosolvencia">Estatus</label>
                 </div>
                 <div class="input-field center-align">
                     <i class="material-icons prefix">account_circle</i>
                     <input id="id_anio" type="text" name="id_anio" class="validate white-text" required/>
-                    <label for="id_anio">Anio</label>
+                    <label for="id_anio">Year</label>
                 </div>
             </div>
             <div class="row center-align">
-                <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons">cancel</i></a>
-                <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></button>
+                <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+                <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Save"><i class="material-icons">save</i></button>
             </div>
         </form>
     </div>
