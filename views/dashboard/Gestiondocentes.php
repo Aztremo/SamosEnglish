@@ -15,8 +15,8 @@ Dashboard::headerTemplate('Gestion Docentes');
                     <img class="activator" src="../../resources/img/docentes.jpg" height="320" width="310">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text">Docentes</span><br>
-                        <p><a href="docentes.php"><button class="btn grey darken-3 white-text center-align">Ver más</button></a></p>
+                        <span class="card-title activator white-text">Teachers</span><br>
+                        <p><a href="docentes.php"><button class="btn grey darken-3 white-text center-align">See more</button></a></p>
                     </div>
                 </div>
             </div>
@@ -27,8 +27,8 @@ Dashboard::headerTemplate('Gestion Docentes');
                     <img class="activator" src="../../resources/img/nivel.jpg" height="320" width="310">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text">Nivel Docente</span><br>
-                        <p><a href="niveldocente.php"><button class="btn grey darken-3 white-text center-align">Ver más</button></a></p>
+                        <span class="card-title activator white-text">Teachers level</span><br>
+                        <p><a href="niveldocente.php"><button class="btn grey darken-3 white-text center-align">See more</button></a></p>
                     </div>
                 </div>
             </div>
@@ -38,8 +38,8 @@ Dashboard::headerTemplate('Gestion Docentes');
                     <img class="activator" src="../../resources/img/tipodoc.jpg" height="320" width="310">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text">Tipo Docente</span><br>
-                        <p><a href="tipodocente.php"><button class="btn grey darken-3 white-text center-align">Ver más</button></a></p>
+                        <span class="card-title activator white-text">Teachers type</span><br>
+                        <p><a href="tipodocente.php"><button class="btn grey darken-3 white-text center-align">See more</button></a></p>
                     </div>
                 </div>
             </div>

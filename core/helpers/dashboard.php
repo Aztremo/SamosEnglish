@@ -93,54 +93,54 @@ class Dashboard
                                 
 
                                 <li>
-                                    <li><a class="dropdown-trigger white-text " href="#!" data-target="primero"><b>Mi cuenta: '.$_SESSION['alias_usuario'].'</b><i class="material-icons white-text left">account_circle</i></a></li>
+                                    <li><a class="dropdown-trigger white-text " href="#!" data-target="primero"><b>My account: '.$_SESSION['alias_usuario'].'</b><i class="material-icons white-text left">account_circle</i></a></li>
                                     <ul id="primero" class="dropdown-content ">
-                                        <li><a href="#" class="white-text" onclick="openModalProfile()"><i class="material-icons white-text ">face</i>Editar Perfil</a></li>
-                                        <li><a href="#password-modal" class="modal-trigger white-text"><i class="material-icons white-text ">lock</i>Cambiar Contraseña</a></li>
-                                        <li><a href="#" class="white-text" onclick="signOff()"><i class="material-icons white-text">clear</i>Salir</a></li>
+                                        <li><a href="#" class="white-text" onclick="openModalProfile()"><i class="material-icons white-text ">face</i>Edit profile</a></li>
+                                        <li><a href="#password-modal" class="modal-trigger white-text"><i class="material-icons white-text ">lock</i>Change password</a></li>
+                                        <li><a href="#" class="white-text" onclick="signOff()"><i class="material-icons white-text">clear</i>Exit</a></li>
                                     </ul>
                                 </li>
                                 
                                 <li>
                                     <a href="Gestionalumnos.php" class="white-text waves-effect wavesl-teal">
                                         <i class="material-icons white-text ">face</i>
-                                        Gestion Alumnos 
+                                        Students management 
                                     </a>
                                 </li>
                                 <li>
                                     <a href="Gestiondocentes.php" class="white-text waves-effect wavesl-teal">
                                         <i class="material-icons white-text">person</i>
-                                        Gestion Docentes 
+                                        Teachers management 
                                     </a>
                                 </li>
                                 <li>
                                     <a href="Gestionasignatura.php" class="white-text waves-effect wavesl-teal">
                                         <i class="material-icons white-text">list</i>
-                                        Gestion asignaturas
+                                        Subject management
                                     </a>
                                 </li>
                                 <li>
                                     <a href="Gestionperfiles.php" class="white-text waves-effect wavesl-teal">
                                         <i class="material-icons white-text">library_books</i>
-                                        Gestion Perfiles
+                                        Activities management
                                     </a>
                                 </li>
                                 <li>
                                     <a href="Gestiongrados.php" class="white-text waves-effect wavesl-teal">
                                         <i class="material-icons white-text">people</i>
-                                        Gestion Grados
+                                        Level management
                                     </a>
                                 </li>
                                 <li>
                                     <a href="Boletas.php" class="white-text waves-effect wavesl-teal">
                                         <i class="material-icons white-text">import_contacts</i>
-                                        Boletas
+                                        Grades
                                     </a>
                                 </li>
                                 <li>
                                     <a href="datoscolegio.php" class="white-text waves-effect wavesl-teal">
                                         <i class="material-icons white-text">chrome_reader_mode</i>
-                                        Datos del colegio
+                                        College information
                                     </a>
                                 </li>
                             </ul>
@@ -180,7 +180,7 @@ class Dashboard
                         <div class="navbar-fixed">
                             <nav>
                                 <div class="nav-wrapper">
-                                    <a href="index.php" class="brand-logo center black-text">SISTEMA DE NOTAS</a>
+                                    <a href="index.php" class="brand-logo center black-text">SAMOS SYSTEM</a>
 
                                 </div>
                             </nav>
@@ -212,8 +212,8 @@ class Dashboard
                               <div class="col l3"></div>
                             <div class="col l5 s12">
                               <h5 class="white-text">Dashboard</h5>
-                              <p class="grey-text text-lighten-4">Sistema control de notas
-                              Proyecto formativo 2020</p>                              
+                              <p class="grey-text text-lighten-4">Grade control system
+                              Formative Project 2020</p>                              
                             </div>
                           </div>
                         </div>
@@ -248,33 +248,33 @@ class Dashboard
             <!-- Componente Modal para mostrar el formulario de editar perfil -->
             <div id="profile-modal" class="modal">
                 <div class="modal-content">
-                    <h4 class="center-align white-text">Editar perfil</h4>
+                    <h4 class="center-align white-text">Edit profile</h4>
                     <form method="post" id="profile-form">
                         <div class="row">
                             <div class="input-field col s12 m6">
                                 <i class="material-icons prefix">person</i>
                                 <input id="nombres_perfil" type="text" name="nombres_perfil" class="validate white-text" required/>
-                                <label for="nombres_perfil">Nombres</label>
+                                <label for="nombres_perfil">Names</label>
                             </div>
                             <div class="input-field col s12 m6">
                                 <i class="material-icons prefix">person</i>
                                 <input id="apellidos_perfil" type="text" name="apellidos_perfil" class="validate white-text" required/>
-                                <label for="apellidos_perfil">Apellidos</label>
+                                <label for="apellidos_perfil">Last names</label>
                             </div>
                             <div class="input-field col s12 m6">
                                 <i class="material-icons prefix">email</i>
                                 <input id="correo_perfil" type="email" name="correo_perfil" class="validate white-text" required/>
-                                <label for="correo_perfil">Correo</label>
+                                <label for="correo_perfil">Email</label>
                             </div>
                             <div class="input-field col s12 m6">
                                 <i class="material-icons prefix">person_pin</i>
                                 <input id="alias_perfil" type="text" name="alias_perfil" class="validate white-text" required/>
-                                <label for="alias_perfil">Alias</label>
+                                <label for="alias_perfil">User</label>
                             </div>
                         </div>
                         <div class="row center-align">
-                            <a href="#" class="btn waves-effect red tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons">cancel</i></a>
-                            <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></button>
+                            <a href="#" class="btn waves-effect red tooltipped modal-close" data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+                            <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Save"><i class="material-icons">save</i></button>
                         </div>
                     </form>
                 </div>
@@ -283,41 +283,41 @@ class Dashboard
             <!-- Componente Modal para mostrar el formulario de cambiar contraseña -->
             <div id="password-modal" class="modal">
                 <div class="modal-content">
-                    <h4 class="center-align white-text">Cambiar contraseña</h4>
+                    <h4 class="center-align white-text">Change password</h4>
                     <form method="post" id="password-form">
                         <div class="row center-align">
-                            <label>CLAVE ACTUAL</label>
+                            <label>Actual password</label>
                         </div>
                         <div class="row">
                             <div class="input-field col s12 m6">
                                 <i class="material-icons prefix">security</i>
                                 <input id="clave_actual_1" type="password" name="clave_actual_1" class="validate white-text" required/>
-                                <label for="clave_actual_1">Clave</label>
+                                <label for="clave_actual_1">Password</label>
                             </div>
                             <div class="input-field col s12 m6">
                                 <i class="material-icons prefix">security</i>
                                 <input id="clave_actual_2" type="password" name="clave_actual_2" class="validate white-text" required/>
-                                <label for="clave_actual_2">Confirmar clave</label>
+                                <label for="clave_actual_2">Confirm password</label>
                             </div>
                         </div>
                         <div class="row center-align">
-                            <label>CLAVE NUEVA</label>
+                            <label>New password</label>
                         </div>
                         <div class="row">
                             <div class="input-field col s12 m6">
                                 <i class="material-icons prefix">security</i>
                                 <input id="clave_nueva_1" type="password" name="clave_nueva_1" class="validate white-text" required/>
-                                <label for="clave_nueva_1">Clave</label>
+                                <label for="clave_nueva_1">Password</label>
                             </div>
                             <div class="input-field col s12 m6">
                                 <i class="material-icons prefix">security</i>
                                 <input id="clave_nueva_2" type="password" name="clave_nueva_2" class="validate white-text" required/>
-                                <label for="clave_nueva_2">Confirmar clave</label>
+                                <label for="clave_nueva_2">Confirm password</label>
                             </div>
                         </div>
                         <div class="row center-align">
-                            <a href="#" class="btn waves-effect red tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons">cancel</i></a>
-                            <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></button>
+                            <a href="#" class="btn waves-effect red tooltipped modal-close" data-tooltip="Cancel"><i class="material-icons">cancel</i></a>
+                            <button type="submit" class="btn waves-effect green tooltipped" data-tooltip="Save"><i class="material-icons">save</i></button>
                         </div>
                     </form>
                 </div>

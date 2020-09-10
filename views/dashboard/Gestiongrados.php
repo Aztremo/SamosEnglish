@@ -16,8 +16,8 @@ Dashboard::headerTemplate('Gestion Grados');
                     <img class="activator" src="../../resources/img/alumnos.jpg">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text ">Grado</span><br>
-                        <p><a href="grado.php"><button class="btn grey darken-3 white-text center-align">Ver más</button></a></p>
+                        <span class="card-title activator white-text ">Grade</span><br>
+                        <p><a href="grado.php"><button class="btn grey darken-3 white-text center-align">See more</button></a></p>
                     </div>
                 </div>
             </div>
@@ -27,8 +27,8 @@ Dashboard::headerTemplate('Gestion Grados');
                     <img class="activator" src="../../resources/img/alumnos.jpg">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text ">Nivel</span><br>
-                        <p><a href="nivel.php"><button class="btn grey darken-3 white-text center-align">Ver más</button></a></p>
+                        <span class="card-title activator white-text ">Level of grade</span><br>
+                        <p><a href="nivel.php"><button class="btn grey darken-3 white-text center-align">See more</button></a></p>
                     </div>
                 </div>
             </div>
@@ -38,8 +38,8 @@ Dashboard::headerTemplate('Gestion Grados');
                     <img class="activator" src="../../resources/img/fam.jpg">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text">Estado Grado</span><br>
-                        <p><a href="estadogrado.php"><button class="btn grey darken-3 white-text center-align">Ver más</button></a></p>
+                        <span class="card-title activator white-text">Grade status</span><br>
+                        <p><a href="estadogrado.php"><button class="btn grey darken-3 white-text center-align">See more</button></a></p>
                     </div>
                 </div>
             </div>
